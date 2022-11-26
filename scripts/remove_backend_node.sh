@@ -5,5 +5,5 @@ docker system prune -f
 cd /home/ubuntu/docker_run
 docker-compose build 
 if [-d /home/ubuntu/docker_run];then
-    docker-comppose down
+    docker-compose down
 fi
