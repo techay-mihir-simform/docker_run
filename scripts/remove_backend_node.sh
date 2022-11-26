@@ -1,6 +1,9 @@
+#!/bin/bash  
 
-# #!/bin/bash
-# sudo pm2 delete backend_dev 
-# if [-d /home/ubuntu/aws_devops_nodejs];then
-#     rm -rf /home/ubuntu/aws_devops_nodejs
-# fi
+# #docker-compose
+sudo docker system prune -f
+cd /home/ubuntu/docker_run
+docker-compose build 
+if [-d /home/ubuntu/mit-backend];then
+    docker-comppose down
+fi
