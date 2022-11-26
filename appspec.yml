@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/docker_run
+
+permissions:
+  - object: / 
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+hooks: 
+  BeforeInstall:
+  - location: scripts/remove_backend_node.sh
+    timeout: 60
+    runas: ubuntu
+  ApplicationStart:
+  - location: scripts/restart_backend.sh
+    timeout: 60
+    runas: ubuntu
