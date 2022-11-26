@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   web:
-    image: 964790914700.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
+    image: 395367784364.dkr.ecr.us-east-1.amazonaws.com/nginx:latest
     ports:
       - "80:80"
     networks:
